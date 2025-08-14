@@ -19,5 +19,5 @@
   setInterval(() => {
     index = (index + 1) % images.length;
     slideshow.src = images[index];
-  }, 5000);
+  }, 4000);
 </script> -->

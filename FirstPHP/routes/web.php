@@ -10,11 +10,8 @@ Route::get('/', function () {
     return view('welcome' , compact('allimg'));
 });
 
-Route::get('/adminHome',function () {
-    $allimg = Sidebar::all();
-    return view('admin.adminHome', compact('allimg'));
+Route::get('/adminHome',function () {;
+    return view('admin.layouts.master');
 });
 
 
-Route::post('/adminHome', [SidebarController::class ,'addslidebarimge'])->name("addslidebarimge");
-Route::delete('/adminHome/{id}', [SidebarController::class ,'deletslidebarimge'])->name("sidebar.destroy");
